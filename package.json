@@ -6,6 +6,13 @@
   "repository": "https://github.com/implausible/Stateless-React-Pager.git",
   "author": "Tyler Wanek <tylerw@axosoft.com>",
   "license": "MIT",
+  "files": ["dist"],
+  "scripts": {
+    "babel": "babel ./src --out-dir ./dist",
+    "flow": "flow",
+    "lint": "eslint --ext .jsx src/ --quiet",
+    "prepublish": "yarn babel"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.0.3",
@@ -22,10 +29,5 @@
   },
   "peerDependencies": {
     "react": "15.x"
-  },
-  "scripts": {
-    "babel": "babel ./src --out-dir ./dist",
-    "flow": "flow",
-    "lint": "eslint --ext .jsx src/ --quiet"
   }
 }
