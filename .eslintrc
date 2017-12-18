@@ -35,6 +35,7 @@
     "flowtype/no-types-missing-file-annotation": 0,
     "flowtype/use-flow-type": 1,
     "func-names": 0,
+    "function-paren-newline": 0,
     "global-require": "off",
     "import/extensions": ['always', { ignorePackages: true }],
     "import/no-unresolved": "off",

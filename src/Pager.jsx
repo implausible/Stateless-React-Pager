@@ -17,38 +17,23 @@ type CreatePageGenerator = (ButtonComponent: ComponentType<ButtonProps>, Ellipsi
     onPageChange: (pageNumber: number) => any
   ) => Element;
 const createPageGenerator: CreatePageGenerator = (ButtonComponent, EllipsisComponent) =>
-  (startingPageNumber, maxPageNumber, showEllipsisCb, onPageChange) =>
-    [1, 2, 3, 4, 5].reduce(
-      ({ pageNumber, output }) => {
-        if (showEllipsisCb(pageNumber)) {
-          return {
-            pageNumber: maxPageNumber - 2,
-            output: [
-              ...output,
-              <EllipsisComponent key='ellipsis' />
-            ]
-          };
-        } else if (pageNumber < maxPageNumber) {
-          return {
-            pageNumber: pageNumber + 1,
-            output: [
-              ...output,
-              (
-                <ButtonComponent key={pageNumber} onClick={() => onPageChange(pageNumber)}>
-                  {pageNumber + 1}
-                </ButtonComponent>
-              )
-            ]
-          };
-        }
+  (startingPageNumber, maxPageNumber, showEllipsisCb, onPageChange) => {
+    const pageButtons = [];
+    for (let pageNumber = startingPageNumber; pageNumber < maxPageNumber; pageNumber += 1) {
+      if (showEllipsisCb(pageNumber)) {
+        pageButtons.push(<EllipsisComponent key='ellipsis' />);
+        pageNumber = maxPageNumber - 2;
+      } else if (pageNumber < maxPageNumber) {
+        pageButtons.push(
+          <ButtonComponent key={pageNumber} onClick={() => onPageChange(pageNumber)}>
+            {pageNumber + 1}
+          </ButtonComponent>
+        );
+      }
+    }
 
-        return {
-          pageNumber,
-          output
-        };
-      },
-      { pageNumber: startingPageNumber, output: [] }
-    ).output;
+    return pageButtons;
+  };
 
 type CreateLeftPageRenderer = (ButtonComponent: ComponentType<ButtonProps>, EllipsisComponent: Component) =>
   (selectedPageNumber: number, onPageChange: (pageNumber: number) => any) => Element;
