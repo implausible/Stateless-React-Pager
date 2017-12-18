@@ -1,6 +1,6 @@
 {
   "name": "stateless-react-pager",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A modular, stateless pager for React",
   "main": "dist/Pager.js",
   "repository": "https://github.com/implausible/Stateless-React-Pager.git",
