@@ -1,0 +1,98 @@
+{
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": ["airbnb", "plugin:flowtype/recommended"],
+  "globals": {
+    "Generator": true,
+    "Promise": true
+  },
+  "plugins": [
+    "flowtype"
+  ],
+  "rules": {
+    "camelcase": [
+      2,
+      {
+        "properties": "always"
+      }
+    ],
+    "array-callback-return": "off",
+    "arrow-body-style": "off",
+    "arrow-spacing": "off",
+    "block-spacing": "off",
+    "comma-dangle": [2, "never"],
+    "consistent-return": "off",
+    "flowtype/define-flow-type": 1,
+    "flowtype/no-types-missing-file-annotation": 0,
+    "flowtype/use-flow-type": 1,
+    "func-names": 0,
+    "global-require": "off",
+    "import/extensions": ['always', { ignorePackages: true }],
+    "import/no-unresolved": "off",
+    "import/prefer-default-export": "off",
+    "jsx-quotes": [2, "prefer-single"],
+    "linebreak-style": 0,
+    "max-len": [2, 120],
+    "new-cap": 0,
+    "newline-per-chained-call": "off",
+    "no-case-declarations": "off",
+    "no-confusing-arrow": "off",
+    "no-duplicate-imports": "off",
+    "no-mixed-spaces-and-tabs": 2,
+    "no-multi-spaces": 2,
+    "no-new": 2,
+    "no-param-reassign": "off",
+    "no-return-assign": "off",
+    "no-trailing-spaces": 2,
+    "no-undef": 2,
+    "no-underscore-dangle": "off",
+    "no-unused-expressions": "off",
+    "no-unused-vars": 2,
+    "no-use-before-define": "off",
+    "no-useless-computed-key": "off",
+    "no-useless-escape": "off",
+    "object-shorthand": [2, "always"],
+    "prefer-arrow-callback": "off",
+    "prefer-rest-params": "off",
+    "quote-props": "off",
+    "react/display-name": 2,
+    "react/forbid-prop-types": 0,
+    "react/jsx-closing-bracket-location": "off",
+    "react/jsx-curly-spacing": "off",
+    "react/jsx-equals-spacing": "off",
+    "react/jsx-first-prop-new-line": "off",
+    "react/jsx-indent-props": "off",
+    "react/jsx-indent": "off",
+    "react/jsx-no-bind": "off",
+    "react/jsx-no-undef": 2,
+    "react/jsx-quotes": 0,
+    "react/jsx-sort-props": [2, {
+      "reservedFirst": false
+    }],
+    "react/jsx-space-before-closing": "off",
+    "react/no-is-mounted": "off",
+    "react/no-unused-prop-types": 0,
+    "react/prefer-es6-class": "off",
+    "react/prefer-stateless-function": "off",
+    "sort-vars": 2,
+    "space-before-function-paren": [2, "never"],
+    "space-in-parens": [2, "never"],
+    "space-unary-ops": [2, { "words": true, "nonwords": false }],
+    "vars-on-top": 0,
+    "wrap-iife": "off"
+  },
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
+    }
+  }
+}

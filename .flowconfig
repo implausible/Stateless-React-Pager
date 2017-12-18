@@ -1,0 +1,4 @@
+[include]
+./src/*.jsx
+[ignore]
+./node_modules/*
