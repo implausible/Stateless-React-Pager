@@ -1,12 +1,14 @@
 {
   "name": "stateless-react-pager",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A modular, stateless pager for React",
   "main": "dist/Pager.js",
   "repository": "https://github.com/implausible/Stateless-React-Pager.git",
   "author": "Tyler Wanek <tylerw@axosoft.com>",
   "license": "MIT",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "babel": "babel ./src --out-dir ./dist",
     "flow": "flow",
